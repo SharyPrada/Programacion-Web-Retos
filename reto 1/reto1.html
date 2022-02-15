@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>r1</title>
+</head>
+<body>
+	
+	<h1 style="text-align:center;">RETO 1</h1>
+	
+	<p style="text-align:center;"> Una página web donde se explique la arquitectura cliente/servidor, que incluya al menos una gráfica.</p> 
+
+	<h2 style="text-align:center;">ARQUITECTURA CLIENTE/SERVIDOR</h2>
+
+	<h3>1. DEFINICIÓN</h3>
+
+	<p>
+		Arquitectura de computación en la que se consigue un procesamiento cooperativo de la información por medio de un conjunto de procesadores, de tal forma que uno o varios clientes, distribuidos geográficamente o no, solicitan servicios de computación a uno o más servidores. (TIC, 2016).<br/><br/>
+
+		Consiste en una arquitectura distribuida de computación, en la que las tareas de cómputo se reparten entre distintos procesadores, obteniendo los usuarios finales el resultado final de forma transparente. La totalidad de los procesadores, clientes y servidores, trabajan de forma cooperativa para realizar un determinado tratamiento de la información.
+	</p>
+
+	<center>
+		<img src="img/1ClienteServidor.png" alt="Arquitectura Cliente/Servidor"/>
+	</center>
+
+	<h3>2. ELEMENTOS PRINCIPALES</h3>
+
+	<h4>2.1 CLIENTE</h4>
+
+	<p>
+		Ordenador o programa informático que solicita información, es el que inicia un requerimiento de servicio. <br/><br/>
+
+		Entidad por medio de la cual un usuario solicita un servicio, realiza una petición o demanda el uso de recursos. Este elemento se encarga de la presentación de los datos y/o información al usuario en un ambiente gráfico.
+	</p>
+
+	<h5>2.1.1 Funciones</h5>
+
+	<ul>
+		<li>Administrar la interfaz de usuario.</li>
+		<li>Interactuar con el usuario y aceptar datos del usuario.</li>
+		<li>Procesar la lógica de la aplicación y hacer validaciones locales.</li>
+		<li>Generar las solicitudes para la BD.</li>
+		<li>Transmitir las solicitudes de la BD al servidor.</li>
+		<li>Recibir los resultados del servidor.</li>
+		<li>Dar formato a los resultados.</li>
+		<li>Captura y validación de los datos de entrada.</li>
+	</ul>
+
+
+	<h4>2.2 SERVIDOR</h4>
+
+	<p>
+		Ordenador o programa informático que dispone de información.<br/><br/>
+
+		Entidad física que provee un servicio y devuelve resultados; ejecuta el procesamiento de datos, aplicaciones y manejo de la información o recursos. Asegura el almacenamiento, distribución, gestión de la disponibilidad y de la seguridad de los datos. Permite el acceso a los datos. El proceso del servidor es reactivo (realiza una función posterior a una petición o la ejecución de una transacción requerida por el cliente o por otro servidor).
+	</p>
+
+	<h5>2.2.1 Funciones</h5>
+
+	<ul>
+		<li>Aceptar las solicitudes sobre la BD de los clientes.</li>
+		<li>Procesar las solicitudes sobre la BD.</li>
+		<li>Dar formato a los resultados y transmitirlos al cliente.</li>
+		<li>Procesar la lógica de la aplicación y realizar validaciones a nivel de bases de datos.</li>
+		<li>Mantener los datos generales de la BD.</li>
+		<li>Proporcionar control de acceso concurrente.</li>
+		<li>Llevar a cabo la recuperación.</li>
+		<li>Optimizar el procesamiento de consultas/actualización.</li>
+	</ul>
+
+	<h4>2.3 MIDDLEWARE</h4>
+
+	<p>
+		Módulo intermedio que actúa como conductor entre sistemas (cliente/servidor) permitiendo a cualquier usuario de sistemas de información comunicarse con varias fuentes de información que se encuentran conectadas por una red. <br/><br/>
+
+		Software construido sobre el protocolo de transporte con el fin de permitir el intercambio de peticiones y respuestas entre el cliente y el servidor de manera transparente; trata de asegurar la transparencia respecto a las redes, los SGBD y en cierta medida a los lenguajes de acceso.<br/><br/>
+
+		Software que se encuentra en el medio del sistema cliente/servidor y se ejecuta en ambos lados, es necesario para el soporte de interacciones entre los clientes y los servidores.
+	</p>
+
+	<h5>2.3.1 Funciones</h5>
+
+	<ul>
+		<li><b>Independizar las dos entidades:</b> El cliente y el servidor no necesitan saber comunicarse entre ellos, sino cómo comunicarse con el módulo de middleware.</li>
+		<li><b>Traducir la información de una aplicación y pasarla a la otra:</b> Acepta consultas y datos recuperándolos de la aplicación cliente, los transmite y envía la respuesta de regreso. También genera los códigos de error.</li>
+		<li><b>Controlar las comunicaciones:</b> Da a la red las características adecuadas de desempeño, confiabilidad, transparencia y administración.</li>
+		<li><b>Procedimiento de Conexión:</b> Operación que permite abrir un camino desde un cliente al servidor designado por un nombre, con verificación del nombre de usuario y palabra reservada. Es necesario identificar también el nombre de la BD.</li>
+		<li><b>Preparación de la petición:</b> Operación que permite enviar una petición con parámetros no instanciados a un servidor con el fin de preparar su ejecución.</li>
+		<li><b>Recuperación de los resultados:</b> Operación que permite traer todo o parte del resultado al cliente.</li>
+		<li><b>Procedimiento de Desconexión:</b> Operación que permite cerrar el camino abierto desde el cliente al servidor.</li>
+	</ul>
+
+	<center>
+		<img src="img/2middleware.png" alt="Middleware"/>
+	</center>
+
+	<h3>3. CARACTERÍSTICAS</h3>
+
+	<ul>
+		<li>El servidor presenta a todos sus clientes una interfaz única y bien definida.</li>
+		<li>El cliente no necesita conocer la lógica del servidor, sólo su interfaz externa.</li>
+		<li>El cliente no depende de la ubicación física del servidor, ni del tipo de equipo físico en el que se encuentra, ni de su sistema operativo.</li>
+		<li>Los cambios en el servidor implican pocos o ningún cambio en el cliente.</li>
+		<li><b>Recursos Compartidos:</b> Un servidor puede atender a muchos clientes al mismo tiempo y regular sus accesos a los recursos compartidos.</li>
+		<li><b>Protocolos Asimétricos:</b> Hay una relación 1 a n entre el servidor y los clientes. Es decir, los clientes siempre inician el diálogo pidiendo servicios. Los servidores esperan pasivamente las peticiones de los clientes.</li>
+		<li><b>Intercambios basados en Mensajes:</b> Los clientes y servidores interactúan utilizando un mecanismo de paso de mensajes. El mensaje es el soporte para las peticiones de servicios y las respuestas.</li>
+		<li><b>Escalabilidad:</b> Los sistemas cliente/servidor se pueden escalar horizontal (añadir o eliminar clientes) y verticalmente (migrar a máquinas servidoras más potentes o multiservidores). </li>
+		<li><b>Integridad:</b> El código y los datos del servidor se mantienen centralizados, con lo que es menos costoso su mantenimiento y controlar la integridad de los datos compartidos.</li>
+	</ul>
+
+	<h3>4. COMPONENTES</h3>
+
+	<ul>
+		<li><b>El cliente:</b> Determinado demandante de servicios, puede ser algún ordenador o una aplicación del área informática, la cual requiera de información proveniente de la red para funcionar de manera adecuada.</li>
+		<li><b>El servidor:</b> Proveedor de servicios, los cuales a su vez pueden ser ordenadores o aplicaciones del área informática, pueden enviar información a los demás agentes que se encuentran conectados a la red.</li>
+		<li><b>El servicio:</b> Conjunto de información específica, que tiene como propósito proporcionar una respuesta a las necesidades de un cliente en específico.</li>
+		<li><b>La red:</b> Conjunto de clientes, servidores y diversos datos que se encuentran enlazados de una manera física o no física, allí se pueden encontrar diversos protocolos de transmisión de información debidamente establecida.</li>
+		<li><b>El protocolo:</b> Grupo de normas, reglas y diversos pasos debidamente establecidos, estos se pueden reflejar de manera clara y concreta acerca del flujo de información en una determinada red debidamente estructurada.</li>
+		<li><b>La base de datos:</b> Diversos bancos de información debidamente ordenada, categorizada y clasificada, las cuales forman parte de la red; son distintos sitios de almacenaje para la implementación de los servidores.</li>
+	</ul>
+
+	<h3>5. ESQUEMA DE FUNCIONAMIENTO</h3>
+
+	<ol>
+		<li>El cliente solicita una información al servidor.</li>
+		<li>El servidor recibe y procesa la petición del cliente.</li>
+		<li>El servidor envía el resultado obtenido al cliente.</li>
+		<li>El cliente recibe el resultado y lo procesa.</li>
+	</ol>
+
+	<center>
+		<img src="img/3esquema.png" alt="Esquema de Funcionamiento"/>
+	</center>
+
+	<h3>6. VENTAJAS Y DESVENTAJAS</h3>
+
+	<h4>VENTAJAS</h4>
+
+	<ul>
+		<li><b>Centralización:</b> El servidor fungirá será la fuente única de información vigente, lo que impide que los clientes conserven información desactualizada.</li>
+		<li><b>Fácil de instalar (cliente):</b> El cliente es por lo general una aplicación simple que no tiene dependencias, por lo que es muy fácil de instalar.</li>
+		<li><b>Separación de responsabilidades:</b> La arquitectura cliente-servidor permite implementar la lógica de negocio de forma separada del cliente.</li>
+		<li><b>Intercomunicación dentro de una Empresa:</b> La estructura cliente servidor además permite proporcionar a las distintas áreas que forman parte de una determinada empresa, el desarrollo de un orden de trabajo, en el que cada uno de los sectores pueda desempeñar su labor, pero ingresando al mismo servidor e información que los demás sin ningún tipo de inconveniente.</li>
+		<li><b>Portabilidad:</b> Facilita la integración entre los distintos sistemas y, además, es capaz de compartir información, permitiendo a su vez que las máquinas ya existentes, puedan ser utilizada a través de una determinada interfaz más agradable para cada uno de los usuarios. Por ejemplo, el servidor puede ser solo en Linux, mientras que el cliente podría ser multiplataforma.</li>
+	</ul>
+
+	<h4>DESVENTAJAS</h4>
+
+	<ul>
+		<li><b>Actualizaciones (clientes):</b> Una de las complicaciones es gestionar las actualizaciones en los clientes, pues puede haber muchos terminales con el cliente instalado y tenemos que asegurar que todas sean actualizadas cuando salga una nueva versión.</li>
+		<li><b>Concurrencia:</b> Una cantidad no esperada de usuarios concurrentes puede ser un problema para el servidor, quien tendrá que atender todas las peticiones de forma simultánea, aunque se puede mitigar con una estrategia de escalamiento, siempre será un problema que tendremos que tener presente.</li>
+		<li><b>Todo o nada:</b> Si el servidor se cae, todos los clientes quedarán totalmente inoperables.</li>
+		<li><b>Protocolos de bajo nivel:</b> Los protocolos más utilizados para establecer comunicación entre el cliente y el servidor suelen ser de bajo nivel, como Sockets, HTTP, RPC, etc. Lo que puede implicar un reto para los desarrolladores.</li>
+		<li><b>Depuración:</b> Es difícil analizar un error, pues los clientes están distribuidos en diferentes máquinas, incluso, equipos a los cuales no tenemos acceso, lo que hace complicado recopilar la traza del error.</li>
+	</ul>
+
+	<h3>7. REFERENCIAS</h3>
+
+	<p>Blancarte Iturralde, O. J. (2020, 1 de marzo). Introducción a la Arquitectura de Software (fragmento en blog). <i>Oscar Blancarte Blog.</i> <a href="https://reactiveprogramming.io/blog/es/estilos-arquitectonicos/cliente-servidor">https://reactiveprogramming.io/blog/es/estilos-arquitectonicos/cliente-servidor</a></p>
+	
+	<p>González Reyes, D.; Carvajal Nunura, B.; Manrique Neira, J.; Quijije, L. G. & Quijije, T. K. (s.f.). Telecomunicaciones: Arquitectura cliente/servidor [web]. <i>Monografías.</i> <a href="https://www.monografias.com/docs114/telecomunicaciones-arquitectura-cliente-servidor/telecomunicaciones-arquitectura-cliente-servidor">https://www.monografias.com/docs114/telecomunicaciones-arquitectura-cliente-servidor/telecomunicaciones-arquitectura-cliente-servidor</a></p>
+	
+	<p>Jimena (2008, 4 de enero). ClienteServidor.pdf [pdf online]. <a href="http://siul02.si.ehu.es/~jimena/ABD/fuentes/">http://siul02.si.ehu.es/~jimena/ABD/fuentes/</a></p>
+	
+	<p>Nota Tecnológica (s.f.). Arquitectura cliente-servidor: ¿De qué trata? [blog]. <i>NotaTecnológica.</i> <a href="https://notatecnologica.com/programas/arquitectura-cliente-servidor/">https://notatecnologica.com/programas/arquitectura-cliente-servidor/</a></p>
+
+	<p>Vaquero, D. (2019, 9 de noviembre). Arquitectura Cliente Servidor [web]. <i>Cursos de Desarrollo.</i> <a href="https://cursosdedesarrollo.com/2019/11/arquitectura-cliente-servidor/">https://cursosdedesarrollo.com/2019/11/arquitectura-cliente-servidor/</a></p>
+
+</body>
+</html>

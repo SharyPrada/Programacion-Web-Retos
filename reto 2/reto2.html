@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>r2</title>
+</head>
+<body>
+	<h1 style="text-align:center;">RETO 2</h1>
+	
+	<p style="text-align:center;"> Una página web donde se listen los servidores web y los servidores de aplicaciones, dependiendo del sistema operativo y del lenguaje de programacion.</p> 
+
+	<h2 style="text-align:center;">LISTA DE SERVIDORES</h2>
+
+	<!---LISTA DE SERVIDORES WEB---->
+	<table border="" align="center">
+		<caption><h3>SERVIDORES WEB</h3></caption>
+
+		<thead>
+			<tr bgcolor="lightgrey">
+				<th>NOMBRE</th>
+				<th>SISTEMA OPERATIVO (Plataforma Soportada)</th>
+				<th>LENGUAJE DE PROGRAMACIÓN (Escrito en...)</th>
+			</tr>
+		</thead>
+		
+		<tbody>
+			<tr  bgcolor="Wheat">
+				<td rowspan="5">Apache HTTP Server</td>
+				<td>Familia Tipo Unix (FreeBSD, Solaris,etc.)</td>
+				<td rowspan="5" style="text-align:center">
+					C<br/>
+					XML
+				</td>
+			</tr>
+			<tr bgcolor="Wheat"><td>Linux</td></tr>
+			<tr bgcolor="Wheat"><td>Windows</td></tr>
+			<tr bgcolor="Wheat"><td>MacOS X</td></tr>
+			<tr bgcolor="Wheat"><td>IOS</td></tr>
+
+			<tr bgcolor="Tan">
+				<td rowspan="4">Caddy Web Server</td>
+				<td>Variantes BSD</td>
+				<td rowspan="4" style="text-align:center">Go</td>
+			</tr>
+			<tr bgcolor="Tan"><td>Linux</td></tr>
+			<tr bgcolor="Tan"><td>Windows</td></tr>
+			<tr bgcolor="Tan"><td>MacOS X</td></tr>
+
+			<tr bgcolor="Wheat">
+				<td rowspan="3">Cherokee Web Server</td>
+				<td>Familia Tipo Unix (BSD, Solaris)</td>
+				<td rowspan="3" style="text-align:center">
+					C<br/>
+					Python<br/>
+					JavaScript
+				</td>
+			</tr>
+			<tr bgcolor="Wheat"><td>Linux</td></tr>
+			<tr bgcolor="Wheat"><td>MacOS X</td></tr>
+
+			<tr bgcolor="Tan">
+				<td rowspan="4">Lighttpd</td>
+				<td>Solaris</td>
+				<td rowspan="4" style="text-align:center">C</td>
+			</tr>
+			<tr bgcolor="Tan"><td>Linux</td></tr>
+			<tr bgcolor="Tan"><td>Windows</td></tr>
+			<tr bgcolor="Tan"><td>MacOS X</td></tr>
+
+			<tr bgcolor="Wheat">
+				<td rowspan="2">LiteSpeed</td>
+				<td>FreeBSD</td>
+				<td rowspan="2" style="text-align:center">
+					C<br/>
+					C++
+				</td>
+			</tr>
+			<tr bgcolor="Wheat"><td>Linux (Fedora/Red Hat, Debian/Ubuntu, CloudLinux OS, AlmaLinux, CentOS)</td></tr>
+
+			<tr bgcolor="Tan">
+				<td>Microsoft Internet Information Services (Microsoft IIS)</td>
+				<td>Windows</td>
+				<td style="text-align:center">C++</td>
+			</tr>
+
+			<tr bgcolor="Wheat">
+				<td rowspan="3">NGINX</td>
+				<td>Linux</td>
+				<td rowspan="3" style="text-align:center">C</td>
+			</tr>
+			<tr bgcolor="Wheat"><td>Windows</td></tr>
+			<tr bgcolor="Wheat"><td>IOS</td></tr>
+
+			<tr bgcolor="Tan">
+				<td rowspan="3">Sun Java System Web Server</td>
+				<td>Familia Tipo Unix</td>
+				<td rowspan="3" style="text-align:center">C</td>
+			</tr>
+			<tr bgcolor="Tan"><td>Linux</td></tr>
+			<tr bgcolor="Tan"><td>Windows</td></tr>
+		</tbody>
+	</table>
+
+	<!---LISTA DE SERVIDORES DE APLICACIÓN---->
+	<table border="" align="center">
+		<caption><h3>SERVIDORES DE APLICACIÓN</h3></caption>
+
+		<thead>
+			<tr bgcolor="lightgrey">
+				<th>NOMBRE</th>
+				<th>SISTEMA OPERATIVO (Plataforma Soportada)</th>
+				<th>LENGUAJE DE PROGRAMACIÓN (Escrito en...)</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			<tr  bgcolor="Wheat">
+				<td rowspan="4">Apache Geronimo</td>
+				<td>Solaris</td>
+				<td rowspan="20" style="text-align:center">Java</td> <!--Para 6 de los 7 servidores listados-->
+			</tr>
+			<tr bgcolor="Wheat"><td>Linux (SUSE, Ubuntu, Fedora/Red Hat)</td></tr>
+			<tr bgcolor="Wheat"><td>Windows</td></tr>
+			<tr bgcolor="Wheat"><td>MacOS X</td></tr>
+
+			<tr  bgcolor="Tan">
+				<td rowspan="3">GlassFish</td>
+				<td>Solaris</td>
+			</tr>
+			<tr bgcolor="Tan"><td>Linux (Red Hat, SUSE, Ubuntu)</td></tr>
+			<tr bgcolor="Tan"><td>Windows</td></tr>
+
+			<tr  bgcolor="Wheat">
+				<td rowspan="4">IBM WebSphere Application Server</td>
+				<td>Familia Tipo Unix (Solaris, AIX, HPUX, z/OS)</td>
+			</tr>
+			<tr bgcolor="Wheat"><td>Linux</td></tr>
+			<tr bgcolor="Wheat"><td>Windows</td></tr>
+			<tr bgcolor="Wheat"><td>IBM i</td></tr>
+
+			<tr  bgcolor="Tan">
+				<td rowspan="3">JOnAS</td>
+				<td>Familia Tipo Unix (Solaris, AIX, HPUX)</td>
+			</tr>
+			<tr bgcolor="Tan"><td>Linux</td></tr>
+			<tr bgcolor="Tan"><td>Windows</td></tr>
+
+			<tr  bgcolor="Wheat">
+				<td rowspan="3">Oracle WebLogic</td>
+				<td>Unix</td>
+			</tr>
+			<tr bgcolor="Wheat"><td>Linux</td></tr>
+			<tr bgcolor="Wheat"><td>Windows</td></tr>
+
+			<tr  bgcolor="Tan">
+				<td rowspan="3">WildFly Application Server</td>
+				<td>Solaris</td>
+			</tr>
+			<tr bgcolor="Tan"><td>Red Hat</td></tr>
+			<tr bgcolor="Tan"><td>Windows</td></tr>
+
+			<tr  bgcolor="Wheat">
+				<td rowspan="4">Zope</td>
+				<td>Familia Tipo Unix (FreeBSD, NetBSD, OpenBSD, Solaris, HPUX, IRIX, DEC OSF/1)</td>
+				<td rowspan="4" style="text-align:center">
+					Python<br/>
+					C
+				</td>
+			</tr>
+			<tr bgcolor="Wheat"><td>Linux</td></tr>
+			<tr bgcolor="Wheat"><td>Windows</td></tr>
+			<tr bgcolor="Wheat"><td>MacOS X</td></tr>
+		</tbody>
+	</table>
+</body>
+</html>
