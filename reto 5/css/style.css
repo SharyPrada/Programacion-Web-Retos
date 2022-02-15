@@ -1,0 +1,94 @@
+/*-------------------------------------------------------*/
+/* ESTILO DE LA PÁGINA */
+body{
+	text-align: center;
+}
+
+/*-------------------------------------------------------*/
+/* ESTILO DEL CONTENEDOR DE LA PÁGINA */
+.contenedor{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 85vh;
+}
+
+/*-------------------------------------------------------*/
+/* ESTILO DE LA CALCULADORA EN GENERAL*/
+.calculadora{
+	display: grid;
+	grid-template-columns: repeat(4, 75px);
+	grid-template-rows: 160px repeat(5, 75px);
+	background-color: #000000;
+	padding: 15px;
+	border-radius: 32px;
+	box-shadow: 10px 10px 10px 5px #00000033;
+}
+
+/*-------------------------------------------------------*/
+/* ESTILO DE LOS BOTONES DE LA CALCULADORA*/
+button{
+	cursor: pointer;
+	margin: 5px;
+	padding: 0;
+	border-radius: 15px;
+	font-size: 1.5em;
+	border: none;
+	background-color: #18597E;
+	color: #ffffff;
+}
+
+.operador {
+	background-color: #fd9503;
+}
+.ext{
+	grid-column: span 2;
+	background-color: #994c00;
+}
+.ext2{
+	background-color: #994c00;
+}
+
+.ext3{
+	grid-column: span 2;
+	background-color: #ff3333;
+}
+
+/*-------------------------------------------------------*/
+/* ESTILO DE ACCIONES */
+
+/* Cambiar colorcito de los botones mientras se interactúa con estos */ 
+button:active{
+	background-color: #00000040;
+}
+
+/* Quitar la margen observada alrededor de los botones al interactuar con estos */
+button:focus{
+	outline: none;
+}
+
+/*-------------------------------------------------------*/
+/* ESTILO DE LA PANTALLA QUE MUESTRA EL RESULTADO DE LA OPERACIÓN */
+.pantalla-result{
+	grid-column: 1/-1;
+	padding: 16px;
+	display: flex;
+	margin: 10px 10px 20px;
+	flex-direction: column;
+	align-items: flex-end;
+	background-color: #363636;
+	color: #ffffff;
+	border-radius: 32px;
+	text-align: right;
+	justify-content: space-between;
+	word-break: break-all;
+}
+
+/*-------------------------------------------------------*/
+/* ESTILO DE LOS VALORES A MOSTRAR EN LA PANTALLA */
+#valorAnterior{
+	font-size: 2em;
+}
+#valorActual{
+	font-size: 1.5em;
+}

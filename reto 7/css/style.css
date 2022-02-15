@@ -1,0 +1,62 @@
+/* Encabezado */
+header {
+  background-color: yellow;
+  font-family: Arial;
+  padding: 0px;
+  margin: 0px;
+}
+header h1 {
+  margin: 0px;
+  padding: 10px;
+  font-size: 250%;
+  text-align: middle;
+}
+
+/* Primer Columna (Menú de Navegación) */
+.main-nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: green;
+}
+.main-nav li a{
+  display: block;
+  color: white;
+  text-align: left;
+  padding: 12px 14px;
+  text-decoration: none;
+}
+
+/* Segunda Columna (Cuerpo de la Página) */
+section { 
+  background-color: #ffec99;  
+}
+article {
+  clear: both;
+}
+article img {
+  float: left;
+  margin-right: 10px;
+}
+
+/* Tercera Columna (Banners) */
+aside {
+  background-color: #ffec99;
+  display: grid;
+  place-content: center;
+}
+aside img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Pie de página */
+footer {
+  clear: both;
+  background-color: yellow;
+  margin: 0px;
+  padding: 5px;
+  border-top: 2px solid black;
+  font-family: Arial;
+}
