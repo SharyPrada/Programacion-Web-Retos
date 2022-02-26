@@ -5,7 +5,7 @@ body{
 }
 
 /*-------------------------------------------------------*/
-/* ESTILO DEL CONTENEDOR DE LA PÁGINA */
+/* ESTILO DEL CONTENEDOR */
 .contenedor{
 	display: flex;
 	justify-content: center;
